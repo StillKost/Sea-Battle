@@ -5,14 +5,33 @@
 	margin: 0px;
 	display: inline-block;
 }
+.field-row{
+	margin: 0px;
+}
 .field{
 	border: 1px solid;
-	padding: 2px;
+	padding: 0px;
 	text-align: center;
 }
-.ship{
+.ship-single{
 	background-color: red;
 }
+.ship-duoble{
+	background-color: green;
+}
+.ship-triple{
+	background-color: yellow;
+}
+.ship-four{
+	background-color: orange;
+}
+.ship-five{
+	background-color: blue;
+}
+.ship-broken{
+	background-color: black;
+}
+
 .ship-hidden{
 	background-color: #cac3c3;
 }
