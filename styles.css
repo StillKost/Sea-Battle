@@ -1,4 +1,8 @@
 
+#hiddenBlock{
+	display: none
+}
+
 .broke{
 	background-color: black !important;
 }
@@ -11,6 +15,7 @@
 }
 .field-row{
 	margin: 0px;
+	height: 35px;
 }
 .field{
 	border: 1px solid;
@@ -37,5 +42,5 @@
 }
 
 .ship-hidden{
-	background-color: #cac3c3;
+	
 }

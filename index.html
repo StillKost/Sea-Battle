@@ -12,19 +12,19 @@
 <div class="row">
 	<div class="container">
 		<div class="col-md-6" id="user-user">
-			<h3>User field</h3>
+			<h3>Мои корабли</h3>
 			<div class="field">
 
 			</div>
 		</div>
 		<div class="col-md-6" id="user-cpu">
-			<h3>CPU field</h3>
+			<h3>Корабли противника</h3>
 			<div class="field">
 
 			</div>
 		</div>
 	</div>
-		<div class="container">
+		<div class="container" id="hiddenBlock">
 		<div class="col-md-6" id="cpu-cpu">
 			<h3>CPU field</h3>
 			<div class="field">
@@ -44,25 +44,23 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 
-		//буду тут накапливать попадания
+		//здесь накапливаем попадания
 		var myPoints = 0;
 		var cpuPoints = 0;
-		//куда цпу струлякал уже
+		//куда cpu уже стрелял
 		var shoted = ["-1,-1"];
 
-		//поле игрока по квадратам
+		//поля игроков
 		var userSquares = $("#user-user").find(".square");
-
 		var cpuUserSquares = $("#cpu-user").find(".square");
 		var cpuSquares = $("#cpu-cpu").find(".square");
 		var userCpuSquares = $("#user-cpu").find(".square");
 
 		//матрицы 10х10
-		var userField = TenToTen(userSquares, 10);
-		var cpuField = TenToTen(cpuSquares, 10);
-
-		var userCpuF = TenToTen(userCpuSquares, 10);
-		var cpuUserSquaresF = TenToTen(cpuUserSquares, 10);
+		var userField = SetMatrix(userSquares, 10);
+		var cpuField = SetMatrix(cpuSquares, 10);
+		var userCpuF = SetMatrix(userCpuSquares, 10);
+		var cpuUserSquaresF = SetMatrix(cpuUserSquares, 10);
 
 		$('#user-cpu .square').click(function (argument) {
 			if($(this).hasClass('ship-hidden') && !$(this).hasClass('broke')){
@@ -73,8 +71,6 @@
 				$(cpuField[x][y]).addClass('broke');
 				myPoints++;
 			}
-
-
 			CheckWiner();
 			Shot();
 		});
@@ -83,10 +79,9 @@
 
 		function Shot(){
 			var squares = $("#user-user").find(".square");
-			var matrix = TenToTen(squares, 10);
+			var matrix = SetMatrix(squares, 10);
 			var x = RandomInt(0,10);
 			var y = RandomInt(0,10);
-			//shoted.push(x + "," + y);
 
 			for(var i = 0; i < shoted.length; i++){
 				var arr = shoted[i].split(',');
@@ -99,13 +94,12 @@
 					shoted.push(x + "," + y);
 					break;
 				}
-			}		
-
+			}
 
 			var elem = matrix[x][y];
 			if($(elem).hasClass('ship') && !$(elem).hasClass('broke')){
 				$(matrix[x][y]).addClass('broke');
-				console.log('я попал');
+				console.log('cpu попал');
 				cpuPoints++;
 			}
 			CheckWiner();
@@ -114,44 +108,28 @@
 
 		function CheckWiner(){
 			if(myPoints == 35){
-				alert('Костя победил!');
-				var shots = Unique(shoted);
+				alert('Вы победили!');
 				console.log(shots);
 			}
 			if(cpuPoints == 35){
-				alert('Костя проиграл!');
-				var shots = Unique(shoted);
+				alert('Вы проиграли!');
 				console.log(shots);
 			}
 		}
 
-	})
+		function SetMatrix(input, size){
+		  for(var x, i = 0, c = -1, l = input.length, n = []; i < l; i++){  
+		    (x = i % size) ? n[c][x] = input[i] : n[++c] = [input[i]];
+		  }
+		  return n;
+		}
 
-	function Unique(arr) {
-		var result = [];
+		function RandomInt(min, max) {
+	  		return Math.floor(Math.random() * (max - min)) + min;
+		}
 
-		nextInput:
-			for (var i = 0; i < arr.length; i++) {
-				var str = arr[i]; // для каждого элемента
-					for (var j = 0; j < result.length; j++) { // ищем, был ли он уже?
-						if (result[j] == str) continue nextInput; // если да, то следующий
-					}
-				result.push(str);
-			}
-
-		return result.length;
-	}
+	});
 
 
 
-	function TenToTen(input, size){
-	  for(var x, i = 0, c = -1, l = input.length, n = []; i < l; i++){  
-	    (x = i % size) ? n[c][x] = input[i] : n[++c] = [input[i]];
-	  }
-	  return n;
-	}
-
-	function RandomInt(min, max) {
-  		return Math.floor(Math.random() * (max - min)) + min;
-	}
 </script>>
