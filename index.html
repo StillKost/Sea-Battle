@@ -41,3 +41,41 @@
 </div>
 </body>
 </html>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		//поле игрока по квадратам
+		var userSquares = $("#user-user").find(".square");
+
+		var cpuUserSquares = $("#cpu-user").find(".square");
+		var cpuSquares = $("#cpu-cpu").find(".square");
+		var userCpuSquares = $("#user-cpu").find(".square");
+
+		//матрицы 10х10
+		var userField = TenToTen(userSquares, 10);
+		var cpuField = TenToTen(cpuSquares, 10);
+
+		var userCpuF = TenToTen(userCpuSquares, 10);
+		var cpuUserSquaresF = TenToTen(cpuUserSquares, 10);
+
+		$('#user-cpu .square').click(function (argument) {
+			if($(this).hasClass('ship-hidden')){
+				$(this).css('background','black');
+			}
+		});
+
+
+
+
+
+
+	})
+
+
+	function TenToTen(input, size){
+	  for(var x, i = 0, c = -1, l = input.length, n = []; i < l; i++){  
+	    (x = i % size) ? n[c][x] = input[i] : n[++c] = [input[i]];
+	  }
+	  return n;
+	}
+</script>>
