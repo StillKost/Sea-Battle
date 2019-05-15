@@ -167,72 +167,45 @@ $(document).ready(function (argument) {
 	//четырехпаллубные
 	$(userCpuF[0][5]).addClass('ship-hidden').addClass('ship').attr('name','0-5');
 	$(userCpuF[0][4]).addClass('ship-hidden').addClass('ship').attr('name','0-4');
-	$(userCpuF[0][2]).addClass('ship-hidden').addClass('ship').attr('name','0-3');
-	$(userCpuF[0][3]).addClass('ship-hidden').addClass('ship').attr('name','0-2');
+	$(userCpuF[0][2]).addClass('ship-hidden').addClass('ship').attr('name','0-2');
+	$(userCpuF[0][3]).addClass('ship-hidden').addClass('ship').attr('name','0-3');
 
-	$(userCpuF[6][5]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][2]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][3]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][4]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[6][5]).addClass('ship-hidden').addClass('ship').attr('name','6-5');
+	$(userCpuF[6][2]).addClass('ship-hidden').addClass('ship').attr('name','6-2');
+	$(userCpuF[6][3]).addClass('ship-hidden').addClass('ship').attr('name','6-3');
+	$(userCpuF[6][4]).addClass('ship-hidden').addClass('ship').attr('name','6-4');
 	//трехпаллубные
-	$(userCpuF[2][4]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[2][3]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[2][2]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[2][4]).addClass('ship-hidden').addClass('ship').attr('name','2-4');
+	$(userCpuF[2][3]).addClass('ship-hidden').addClass('ship').attr('name','2-3');
+	$(userCpuF[2][2]).addClass('ship-hidden').addClass('ship').attr('name','2-2');
 
-	$(userCpuF[3][9]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[4][9]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[5][9]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[3][9]).addClass('ship-hidden').addClass('ship').attr('name','3-9');
+	$(userCpuF[4][9]).addClass('ship-hidden').addClass('ship').attr('name','4-9');
+	$(userCpuF[5][9]).addClass('ship-hidden').addClass('ship').attr('name','5-9');
 
-	$(userCpuF[8][5]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[8][6]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[8][7]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[8][5]).addClass('ship-hidden').addClass('ship').attr('name','8-5');
+	$(userCpuF[8][6]).addClass('ship-hidden').addClass('ship').attr('name','8-6');
+	$(userCpuF[8][7]).addClass('ship-hidden').addClass('ship').attr('name','8-7');
 
 	//двухпаллубные
-	$(userCpuF[5][7]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[4][7]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[5][7]).addClass('ship-hidden').addClass('ship').attr('name','5-7');
+	$(userCpuF[4][7]).addClass('ship-hidden').addClass('ship').attr('name','4-7');
 
-	$(userCpuF[0][9]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[0][8]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[0][9]).addClass('ship-hidden').addClass('ship').attr('name','0-9');
+	$(userCpuF[0][8]).addClass('ship-hidden').addClass('ship').attr('name','0-8');
 
-	$(userCpuF[4][2]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[4][3]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[4][2]).addClass('ship-hidden').addClass('ship').attr('name','4-2');
+	$(userCpuF[4][3]).addClass('ship-hidden').addClass('ship').attr('name','4-3');
 
-	$(userCpuF[9][2]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[8][2]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[9][2]).addClass('ship-hidden').addClass('ship').attr('name','9-2');
+	$(userCpuF[8][2]).addClass('ship-hidden').addClass('ship').attr('name','8-2');
 	//однопаллубные
-	$(userCpuF[7][9]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[4][5]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[0][0]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[2][6]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[3][0]).addClass('ship-hidden').addClass('ship');
+	$(userCpuF[7][9]).addClass('ship-hidden').addClass('ship').attr('name','7-9');
+	$(userCpuF[4][5]).addClass('ship-hidden').addClass('ship').attr('name','4-5');
+	$(userCpuF[0][0]).addClass('ship-hidden').addClass('ship').attr('name','0-0');
+	$(userCpuF[2][6]).addClass('ship-hidden').addClass('ship').attr('name','2-6');
+	$(userCpuF[3][0]).addClass('ship-hidden').addClass('ship').attr('name','3-0');
 
-	$(userCpuF[9][0]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[8][0]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[7][0]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][0]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[5][0]).addClass('ship-hidden').addClass('ship');
-	//четырехпаллубные
-	$(userCpuF[0][5]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[0][4]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[0][2]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[0][3]).addClass('ship-hidden').addClass('ship');
-
-	$(userCpuF[6][5]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][2]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][3]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[6][4]).addClass('ship-hidden').addClass('ship');
-	//трехпаллубные
-	$(userCpuF[2][4]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[2][3]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[2][2]).addClass('ship-hidden').addClass('ship');
-
-	$(userCpuF[3][9]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[4][9]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[5][9]).addClass('ship-hidden').addClass('ship');
-
-	$(userCpuF[8][5]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[8][6]).addClass('ship-hidden').addClass('ship');
-	$(userCpuF[8][7]).addClass('ship-hidden').addClass('ship');
 
 
 
