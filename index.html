@@ -70,6 +70,7 @@
 				var y = parseFloat(coords[1]);
 				$(cpuField[x][y]).addClass('broke');
 				myPoints++;
+				return;
 			}
 			CheckWiner();
 			Shot();
@@ -101,6 +102,7 @@
 				$(matrix[x][y]).addClass('broke');
 				console.log('cpu попал');
 				cpuPoints++;
+				Shot();
 			}
 			CheckWiner();
 		}
